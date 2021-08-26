@@ -1,8 +1,8 @@
-from django.urls import path, include
-from . views import index
+from django.urls import path
+from . views import detail, index
 
 app_name = 'polls'
 
 urlpatterns = [
-    path('', view=index, name='index'),
+    path('details/<int:question_id>/', view=detail, name='details'),
 ]
